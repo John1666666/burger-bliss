@@ -1,0 +1,972 @@
+/*已填寫*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*已填寫*/
+@keyframes floating{
+    0%, 100%{
+        transform:translateY(0rem);
+    }
+    50%{
+        transform:translateY(-2rem);
+    }
+}
+
+/*已填寫*/
+@keyframes floating2{
+    0%, 100%{
+        transform:translateY(0rem);
+    }
+    50%{
+        transform:translateY(-1rem);
+    }
+}
+
+
+/*已填寫*/
+*{
+    margin:0;
+    padding:0;
+    font-family:Poppins,sans-serif;
+    text-transform:capitalize;
+    text-decoration:none;
+
+    outline:none; border:none;
+
+}
+/*已填寫*/
+:root{
+    --black-clr:#000;
+    --white-clr:#fff;
+    --blue-clr:#cae8e3;
+    --pink-clr:#f6e4d5;
+    --yellow-clr:#ffd080;
+    --sliver-clr:#afadaafc;
+    --border-clr:.2rem solid #000;
+    --background-clr:#502626;
+}
+/*已填寫*/
+html{
+    overflow-x:hidden;
+    font-size:62.5%;
+    scroll-behavior:smooth;
+    scroll-padding-top:7rem;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+
+    &::webkit-scrollbar-track{
+        width:var(--white-clr);
+    }
+
+    &::-webkit-scrollbar-thumb{
+        width:var(--black-clr);
+    }
+}
+
+/*已填寫*/
+.header{
+    position:sticky;
+    top:0; left:0; right:0;
+    z-index:999;
+
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:var(--background-clr);
+    padding:2rem 9%;
+    
+    .logo{
+        color:var(--white-clr);
+        font-size:2.8rem;      
+    }
+
+    
+
+    .navbar a{
+        margin-right:6rem;
+        color:var(--white-clr);
+        font-size:2.5rem;
+
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+
+    .fa-times::before{
+         content:"\00D7";
+         font-size:24px;
+         color:var(--white-clr);
+         font-size:4rem;
+    }
+
+    .btn{
+
+        display:flex;
+        align-items:center;
+        i{
+            color:var(--white-clr);
+            margin-right:4rem;
+            font-size:4rem;
+            display:none;
+
+            
+        }
+
+        img{
+            margin-right:4rem;
+
+            border:2px solid rgba(0,0,0,.5);
+            border-radius:50%;
+
+            background-color:#fff;
+
+            padding:1.5rem;
+
+            transition:.5s;
+
+            &:hover{
+               transform:scale(1.2);
+               transform:rotate(360deg);
+            }
+        }
+    }
+}
+
+/*已填寫*/
+section{
+    padding:5rem 4%;
+}
+
+/*已填寫*/
+.home{
+    min-height:20vh;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    gap:2rem;
+    background:#860808;
+
+    .wrapper{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
+    }
+
+    .slide{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        padding-right:2rem;
+        transform:translateY(-4rem);
+    }
+
+
+    .content{
+         
+         padding-right:2rem;
+         transform:translateY(-10rem);
+
+         h2{
+            font-size:2.5rem;
+            color:orange;
+           
+         }
+
+         h3{
+            font-size:4.5rem;
+            color:red;
+            margin:2rem 0;
+         }
+         p{
+            font-size:2.5rem;
+            line-height:2;
+         }
+
+         button{
+            margin-top:4rem;
+            padding:1.5rem 5rem;
+            cursor:pointer;
+            border-radius:3rem;
+            background:#502626;
+            font-size:2rem;
+
+            transition:.5s;
+
+            &:hover{
+                transform:scale(1.1);
+                letter-spacing:.1rem;
+                background-color:#860808
+            }
+         }
+
+         
+               
+         
+    }
+
+    .image{
+        flex:1 1 23rem;
+
+        img{
+            width:100%;
+            transform:translateY(-10rem);
+            
+        }
+    }
+
+    
+}
+
+/*已填寫*/
+.heading{
+    text-align:center;
+
+    h2{
+        font-size:3rem;
+    }
+
+    h3{
+        font-size:5rem;
+        margin-bottom:2rem;
+    }
+}
+
+/*已填寫*/
+.dishes{
+    .box-container{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:2rem;
+
+        .image{
+            
+            
+            img{
+                height:200px;
+                object-fit:cover;
+                width:100%;
+                               
+            }
+        }
+
+        .box{
+            background-color:#b47624;
+            text-align:center;
+            display:inline-flex;
+            flex-direction:column;
+            align-items:center;
+            border-radius:6px;
+
+            h2{
+                font-size:4rem;
+            }
+
+            .price{
+                font-size:4rem;
+                margin:1rem 0;
+            }
+
+            .btn{
+                background:#502626;
+                padding:2rem 7rem;
+                margin-bottom:3rem;
+                border-radius:2rem;
+                font-size:3rem;
+                cursor:pointer;
+
+                transition:.5s;
+
+                &:hover{
+                    background-color:rgb(93, 86, 12);
+                    letter-spacing:.1rem;
+                }
+            }
+        }
+    }
+}
+
+/*已填寫*/
+.about{
+    .box-container{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        .image{
+            flex:1 1 23rem;
+            img{
+                width:100%; 
+            }
+        }
+
+        .content{
+            flex:1 1 23rem;
+            h3{
+                text-align:center;
+                font-size:4rem;
+                margin-bottom:2rem;
+            }
+            p{
+                line-height:2;
+                font-size:2.5rem;
+
+                margin-bottom:5rem;
+            }
+
+            .btn{
+                line-height:3;
+                
+                margin-right:6rem;
+                font-size:3rem;
+                color:#ffff;
+
+                padding:1rem 1rem;
+
+                margin-bottom:4rem;
+
+                background-color:#81a085;
+
+                border-radius:12px;
+
+                transition:.5s;
+
+                &:hover{
+                    background-color:#860808;
+                    letter-spacing:.1rem;
+                }
+
+            }
+
+            a{
+                color:#ffff;
+                padding:2rem 7rem;
+                background-color:blue;
+                font-size:2rem;
+                border-radius:3rem;
+
+                transition:.5s;
+
+                &:hover{
+                    background-color:#0f064b;
+                    letter-spacing:.1rem;
+                }
+            }
+        }
+    }
+}
+
+/*已填寫*/
+.menu{
+    .box-container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:5rem;
+
+      .box{
+        
+        display:flex;
+        align-items:flex-start;
+        justify-content:center;
+        flex-direction:column;
+
+        padding:1rem 3rem;
+
+        background-color:#502626;
+        border-radius:3rem;
+        .image{
+            
+            
+            img{
+                height:200px;
+                object-fit:cover;
+                width:100%;               
+            }
+        }
+
+        h2{
+            font-size:3rem;
+        }
+
+        p{
+            font-size:2rem;
+            margin:1.5rem 0;
+            line-height:2;
+        }
+
+        .purchase{
+            display:flex;
+            justify-content:space-between;
+
+            a{
+                color:#ffff;
+                margin-right:2rem;
+                font-size:3rem;
+                background-color:#0f064b;
+                padding:1.5rem 2rem;
+                border-radius:2rem;
+
+                transition:.5s;
+
+                &:hover{
+                    background-color:#5d4213;
+                    letter-spacing:.1rem;
+                }
+            }
+
+            .price{   
+                font-size:3.5rem;
+                transform:translateY(1rem);
+
+                span:first-child{
+                     color:#a96767
+                }
+            }
+        }
+      }
+      
+      
+    }
+}
+
+/*已填寫*/
+.review{
+    .slide-container{
+        max-width:70rem;
+        margin:1rem auto;
+
+        .slide{
+            max-width:70rem;
+            margin:1rem auto;
+            text-align:center;
+            display:none;
+
+            &.active{
+                display:block;
+            }
+
+            img{
+                height:10rem;
+                width:10rem;
+                border-radius:50%;
+
+                object-fit:cover;
+                animation:floating2 .4s linear;
+            }
+
+            p{
+                padding:2rem 0;
+                font-size:2rem;
+                line-height:2;
+                animation:floating .6s linear;
+            }
+
+            h2{
+                padding:.5rem 0;
+                font-size:2rem;
+                animation:floating2 .8s linear;
+            }
+        }
+
+        .controls{
+            text-align:center;
+            
+            img{
+                padding:2rem 2rem;
+                background-color:#c2abab;
+                margin:0 8rem;
+                border-radius:50px;
+                cursor:pointer;
+
+                transition:.5s;
+
+                &:hover{
+                    transform:scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+/*已填寫*/
+.order{
+    .wrapper{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        form{
+            width:90rem;
+            border-radius:.5rem;
+            padding:1.5rem;
+
+            margin-bottom:2rem;
+
+            
+
+            .btn{
+                margin-top:3rem;
+                padding:2rem 5rem;
+                border-radius:5px;
+                font-size:2rem;
+                background-color:#860808;
+                cursor:pointer;
+
+                transition:.5s;
+
+                &:hover{
+                    background-color:#254099;
+                    letter-spacing:.1rem;
+                }
+            }
+
+            .input-box{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+
+                width:90rem;
+                
+                padding:1.5rem;
+                background-color:#907e6f;
+
+                
+
+                .input{
+                    width:49%;
+                    
+
+                    input{
+                        position:relative;
+                        padding:1.1rem 1rem; /*1.1rem 13rem 会影响输入位置*/
+                        border-radius:12px;
+                        width:90%;/*調整長度*/
+                        
+                     
+                     placeholder{
+                        padding:0 1rem;
+                     }
+                       
+                    }
+
+                    textarea{
+                    resize:none;
+                    border-radius:4px;
+                    padding:1.2rem 1.1rem;
+                    width:90%;
+                    }
+
+                    span{
+                        display:block;
+                        padding:.5rem 0;
+                        font-size:1.5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*已填寫*/
+.order .wrapper form .input-box .input input::placeholder,
+.order .wrapper form .input-box .input textarea::placeholder {
+   color:#ffff;
+   position:absolute;
+   left:0;
+   transform:translateX(1rem);
+}
+
+/*已填寫*/
+.order .wrapper form .input-box .input textarea::placeholder{
+    top:5%;
+}
+
+/*已填寫*/
+.footer{
+
+   .box-container{
+       display:grid;
+       grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
+       gap:1.5rem;
+       
+      
+       padding:20px;
+       background-color:#907e6f;
+
+       .box{
+
+
+
+        flex:1;
+        text-align:center;
+        
+        h3{
+            font-size:2rem;
+            color:#502626;
+        }
+          a{
+            display:block;
+            padding:.9rem 0;
+
+            color:#ffff;
+
+            font-size:1.6rem;
+
+            &:hover{
+                text-decoration:underline;
+            }
+          }
+
+       }
+   }
+
+   .credit{
+    text-align:center;
+    font-size:2rem;
+
+    span{
+        color:#a54040
+    }
+   }
+}
+
+
+/*order now*/ /*已填寫*/
+@media (max-width: 767px) {
+    .order .wrapper form {
+         width: 100%;
+         padding: 1rem;
+     }
+
+    .order .wrapper form .input-box {
+         width: 100%;
+         flex-direction: column;
+     }
+ 
+    /*2 sets 嘢 your name your number , your order additional food...*/ 
+    .order .wrapper form .input-box .input {
+         width: 90%;
+         margin-bottom: 1.5rem;
+     }
+
+    .order .wrapper form .input-box .input input,
+    .order .wrapper form .input-box .input textarea {
+         width: 100%;
+     }
+ }
+
+ /* 中等屏幕设备（如平板） */ /*已填寫*/
+ @media (min-width: 768px) and (max-width: 991px) {
+    .order .wrapper form {
+         width: 80%;
+     }
+
+    .order .wrapper form .input-box {
+         width: 100%;
+     }
+
+    .order .wrapper form .input-box .input input,
+    .order .wrapper form .input-box .input textarea {
+         width: 95%;
+     }
+ }
+
+
+
+
+
+/*已填寫*/
+@media(max-width:1600px){
+    .about{
+        .content{
+
+            .btn{
+                display:flex;
+                width:75%;
+                padding:1rem 1rem;
+                text-align:center;
+               
+            }
+        }
+    }
+}
+
+
+
+
+/*已填寫*/
+@media(max-width:1540px){
+    
+    /*已填寫*/
+    .header{
+        padding:2rem 3%;
+    }
+/*已填寫*/
+    .home{
+        .content{
+            flex:1 1 51rem;
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:1400px){
+    .menu{
+
+        .box-container{
+
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:770px){
+    .menu{
+
+        .box-container{
+
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:1330px){
+    .header{
+
+        .navbar{
+            display:none;
+        }
+        .btn{
+            i{
+                display:inline-block;
+            }
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:1329px){
+    .header{
+        .navbar{
+                position:absolute;
+                top:99%; left:0; right:0;
+                border-top:4px solid;
+                background:var(--sliver-clr);
+                display:block;
+                clip-path:polygon(0 0,100% 0,0 0);
+                transition:.5s linear;
+
+                &.fa-times{
+                    transform:rotate(180deg); /*旋轉 180deg*/
+                }
+
+                a{
+                    display:block;
+                    margin:0;
+                    padding:2.5rem 2rem;
+                }
+
+                &.active{
+                    clip-path:polygon(0 0,100% 0,100% 100%,0 100%);  
+                }
+            }
+        }
+    }
+
+/*已填寫*/
+@media(max-width:1240px){
+    .dishes{
+        
+        .box{
+            img{
+                transform:translateX(-3rem);
+            }
+        }
+       
+    }
+}
+
+/*已填寫*/
+@media(max-width:1130px){
+    .dishes{
+        .box-container{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:1050px){
+    .slide{
+        .content{
+            flex:1 1 15rem;
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:820px){
+    .slide{
+        .content{
+           .btn{
+            margin-left:10rem;
+            padding-top:8rem;
+           }
+           h3{
+            font-size:3rem;
+           }
+        }
+
+        .image{
+            transform:translateY(-6rem);
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:730px){
+    .dishes{
+        .box-container{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+
+            .box{
+                .btn{
+                    width:60%;
+                }
+            }
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:650px){
+
+   /*已填寫*/ 
+    .home{
+        .wrapper{
+            display:flex;
+            
+        }
+    /*已填寫*/
+    .slide{
+        .content{
+            flex:1 1 0rem;
+        }
+    }
+    }
+}
+
+/*已填寫*/
+@media(max-width:555px){
+
+    /*已填寫*/
+    .header{
+        width:100%;
+    }
+    /*已填寫*/
+    .home{
+
+        .swiper-wrapper .swiper-slide:nth-last-child(1) .image img {
+            width: 200px;
+            height: auto;
+        }
+        .slide{
+            display:flex;
+            flex-direction:column;
+
+            .image{
+                position:absolute;
+                top:80%;
+                left:10%;
+                height:50px;
+                width:300px;
+                object-fit:cover;
+
+                
+            }
+
+
+            .content{
+                .btn{
+                    transform:translateY(10rem);
+                }
+            }
+        }
+    }
+    /*已填寫*/
+    .about{
+
+        .box-container{
+          
+            flex-direction:column; /*不用寫 display:flex 達到垂直排列*/
+            
+            .image,.content {
+                display:inline-flex;
+                flex-direction:column;
+
+                
+            }
+            .content{  
+                
+                    .btn{
+                        background-color:red;
+                        font-size:2rem;
+                        width:100%;
+
+                        a{
+                            width:100%;
+                        }
+                    }
+
+                    .btn2{
+                        padding:2rem 3rem;
+                    }
+
+                    
+                
+            }
+        }
+       
+    }
+}
+
+/*已填寫*/
+@media(max-width:540px){
+    .header{
+        .btn{
+            margin-right:.1rem;
+        }
+    }
+}
+
+/*已填寫*/
+@media(max-width:510px){
+    /*已填寫*/
+    .review{
+        .controls{
+            display:flex;
+            align-items:center;
+        }
+    }
+  
+    /*已填寫*/
+    .order{
+        .btn{
+            width:100%;
+        }
+    }
+}
