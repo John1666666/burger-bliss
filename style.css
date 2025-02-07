@@ -52,7 +52,7 @@ html{
     scroll-padding-top:7rem;
 
     &::-webkit-scrollbar{
-        width:1rem;
+        width:0rem;
     }
 
     &::webkit-scrollbar-track{
